@@ -14,6 +14,8 @@ function addTask(){
         span.innerHTML = "\u00d7";
         li.appendChild(span);
     }
+
+    inputBox.value = '';
 };
 
 function toggler(event) {
@@ -26,7 +28,7 @@ function toggler(event) {
 function deleter(event) {
     let trg = event.target;
 
-    if(trg === 'SPAN') {
+    if(trg.tagName === 'SPAN') {
         trg.parentElement.remove();
     }
 }
