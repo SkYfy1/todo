@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Spline Sans Mono', monospace;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(0, 51, 117), rgb(10, 113, 248));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+.to-do {
+    width: 640px;
+    min-height: 240px;
+    background: rgb(255, 255, 255);
+    padding: 40px 30px 70px;
+    border-radius: 25px;
+}
+
+.to-do h2 {
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.to-do h1 img {
+    max-width: 25px;
+    margin-left: 10px;
+}
+
+/* Input */
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
