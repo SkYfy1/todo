@@ -9,6 +9,10 @@ function addTask(){
         let li = document.createElement('li');
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li);
+
+        let span = document.createElement('span');
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
     }
 };
 
@@ -19,7 +23,17 @@ function toggler(event) {
     target.classList.toggle('checked');
 }
 
+function deleter(event) {
+    let trg = event.target;
+
+    if(trg === 'SPAN') {
+        trg.parentElement.remove();
+    }
+}
+
 
 button.addEventListener('click', addTask);
 
 listContainer.addEventListener('click', toggler);
+
+listContainer.addEventListener('click', deleter, false);
