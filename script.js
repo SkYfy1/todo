@@ -24,15 +24,16 @@ function addTask(){
     if (inputBox.value === '') {
         alert('You must write something!');
     } else {
+        todoData.push(inputBox.value);
         let li = document.createElement('li');
         li.innerHTML = inputBox.value;
-        todoData.push(inputBox.value);
         listContainer.appendChild(li);
 
         let span = document.createElement('span');
         span.innerHTML = "\u00d7";
         li.appendChild(span);
     }
+
     localStorage.setItem('todos', JSON.stringify(todoData));
 
     inputBox.value = '';
@@ -49,6 +50,7 @@ function deleter(event) {
     let trg = event.target;
 
     if(trg.tagName === 'SPAN') {
+        localStorage.clear();
         trg.parentElement.remove();
     }
 }
